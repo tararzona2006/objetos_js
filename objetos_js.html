@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Área de Círculo</title>
+</head>
+<body>
+  <h1>Calculadora de Área de Círculo</h1>
+  <label for="radio">Radio del círculo:</label>
+  <input type="number" id="radio" step="any">
+  <button onclick="calcularArea()">Calcular Área</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcularArea() {
+      // Obtener el valor del radio del círculo desde el input
+      var radio = parseFloat(document.getElementById('radio').value);
+      
+      // Calcular el área del círculo usando la fórmula A = π * r^2
+      var area = Math.PI * Math.pow(radio, 2);
+      
+      // Mostrar el resultado en el párrafo con id 'resultado'
+      document.getElementById('resultado').textContent = 'El área del círculo es: ' + area.toFixed(2);
+    }
+  </script>
+</body>
+</html>
